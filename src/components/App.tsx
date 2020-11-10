@@ -1,16 +1,14 @@
 import React, { useReducer, useEffect } from "react";
-
 import Header from "./Header";
 import Movie from "./Movie";
-import Search from "./Search";
+// redux
+import { initialState, reducer } from "../store/reducer";
+import { SEARCH_MOVIES_SUCCESS } from "../store/reducer/actions";
+// third-party
+import axios from "axios";
+// assets
 import spinner from "../assets/img/ajax-loader.gif";
 import "../App.css";
-import { initialState, reducer } from "../store/reducer";
-import {
-  SEARCH_MOVIES_SUCCESS,
-  SEARCH_MOVIES_FAILURE,
-} from "../store/reducer/actions";
-import axios from "axios";
 
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";
 
@@ -27,24 +25,7 @@ const App = () => {
   const refreshPage = (): void => {
     window.location.reload();
   };
-  const search = (searchValue: string) => {
-    console.log(searchValue);
-    axios(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`).then(
-      (jsonResponse) => {
-        if (jsonResponse.data.Response === "True") {
-          dispatch({
-            type: SEARCH_MOVIES_SUCCESS,
-            payload: jsonResponse.data.Search,
-          });
-        } else {
-          dispatch({
-            type: SEARCH_MOVIES_FAILURE,
-            error: jsonResponse.data.Error,
-          });
-        }
-      }
-    );
-  };
+
   const { movies, errorMessage, loading } = state;
 
   const retrievedMovies =
@@ -60,8 +41,8 @@ const App = () => {
   return (
     <div className="App">
       <div className="m-container">
-        <Header text="HOOKED" />
-        <Search search={search} />
+        <Header text="MOVIE SHARING" data={state} />
+
         <p className="App-intro">Sharing a few of our favourite movies</p>
         <div className="movies">{retrievedMovies}</div>
       </div>

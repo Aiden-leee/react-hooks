@@ -1,3 +1,13 @@
+body,
+html {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
 .App {
   text-align: center;
 }
@@ -64,7 +74,7 @@
 }
 
 /* new css for movie component */
-
+/*
 * {
   box-sizing: border-box;
 }
@@ -146,3 +156,4 @@ input[type="submit"]:hover {
     margin: auto;
   }
 }
+*/
