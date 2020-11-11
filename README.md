@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Favourite Movie List Search
 
 [Demo view](https://aiden-leee.github.io/react-hooks/)
 
