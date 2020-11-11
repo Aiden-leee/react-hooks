@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React from "react";
 import Search from "./Search";
 import styled from "styled-components";
 

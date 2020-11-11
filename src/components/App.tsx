@@ -72,7 +72,6 @@ const App = () => {
     <div className="App">
       <div className="m-container">
         <Header text="MOVIE SHARING" search={search} />
-
         <Ptag className="App-intro">Sharing a few of our favourite movies</Ptag>
         <Content data={retrievedMovies}></Content>
       </div>
