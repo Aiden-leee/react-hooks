@@ -1,10 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+위의 코드 주소를 복사하여 터미널에서 `git clone https://github.com/Aiden-leee/react-hooks.git` clone을 해줍니다.
 
 ### `npm start`
 

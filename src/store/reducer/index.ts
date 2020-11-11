@@ -3,7 +3,6 @@ import {
   SEARCH_MOVIES_SUCCESS,
   SEARCH_MOVIES_FAILURE,
 } from "./actions/";
-
 interface InitialType {
   loading: boolean;
   movies: any[];
