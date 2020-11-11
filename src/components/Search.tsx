@@ -30,6 +30,9 @@ const SubmitButton = styled.input.attrs({
   &:focus {
     outline: 0;
   }
+  &:hover {
+    opacity: 0.9;
+  }
 `;
 
 interface SearchProps {
