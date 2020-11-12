@@ -5,11 +5,12 @@ import "swiper/swiper-bundle.css";
 Swiper.use([Navigation]);
 
 const ContentBlock = styled.div`
+  padding: 10px;
   > .swiper-container {
     border-radius: 5px;
   }
-  > .swiper-wrapper {
-    padding: 10px;
+  .swiper-wrapper {
+    padding: 10px 0;
   }
 `;
 interface contentType {
@@ -22,10 +23,6 @@ const Content: React.FC<contentType> = ({ data }) => {
         slidesPerView: 3,
         spaceBetween: 30,
         freeMode: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -54,9 +51,14 @@ const Content: React.FC<contentType> = ({ data }) => {
     <ContentBlock className="content">
       <div className="swiper-container list">
         <div className="swiper-wrapper">{data}</div>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
+        {data.length > 1 ? (
+          <>
+            <div className="swiper-button-next"></div>
+            <div className="swiper-button-prev"></div>
+          </>
+        ) : (
+          ""
+        )}
       </div>
     </ContentBlock>
   );

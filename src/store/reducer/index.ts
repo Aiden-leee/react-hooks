@@ -28,12 +28,14 @@ export const reducers = (state: InitialType, action: any) => {
         ...state,
         loading: false,
         movies: action.payload,
+        errorMessage: null,
       };
     case SEARCH_MOVIES_FAILURE:
       return {
         ...state,
         loading: false,
         errorMessage: action.error,
+        movies: [],
       };
     default:
       return state;

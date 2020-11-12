@@ -4,7 +4,6 @@ import Movie from "./Movie";
 import Content from "./Content";
 // redux
 import { initialState, reducers } from "../store/reducer";
-// import { SEARCH_MOVIES_SUCCESS } from "../store/reducer/actions";
 import {
   SEARCH_MOVIES_SUCCESS,
   SEARCH_MOVIES_FAILURE,
@@ -41,6 +40,7 @@ const App = () => {
   const search = (searchValue: string) => {
     axios(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`).then(
       (jsonResponse) => {
+        console.log(jsonResponse);
         if (jsonResponse.data.Response === "True") {
           dispatch({
             type: SEARCH_MOVIES_SUCCESS,
