@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Favourite Movie List Search
+
+<img width="1191" alt="스크린샷 2020-11-12 오전 1 40 29" src="https://user-images.githubusercontent.com/52125590/98838836-2338a880-2488-11eb-9e21-b0b9eed28f49.png">
+
 
 [Demo view](https://aiden-leee.github.io/react-hooks/)
 
