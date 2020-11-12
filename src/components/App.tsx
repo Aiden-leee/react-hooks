@@ -40,7 +40,6 @@ const App = () => {
   const search = (searchValue: string) => {
     axios(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`).then(
       (jsonResponse) => {
-        console.log(jsonResponse);
         if (jsonResponse.data.Response === "True") {
           dispatch({
             type: SEARCH_MOVIES_SUCCESS,
